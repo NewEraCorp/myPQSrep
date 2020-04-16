@@ -1,6 +1,6 @@
 from pprint import pprint
 from MyCar import MyCar
-from task5.search_in_list import l_search_on_val
+
 
 vw_tuareg = MyCar("VW", "Tuareg", 2014, 265, 2500, 1)
 lc200 = MyCar("Toyota", "LC200", 2019, 248, 3200, 1)
@@ -22,9 +22,14 @@ cars = {
 
 while 1:
     q = input('Введите запрос для поиска: ')
-    for i in cars.keys():
-        if cars[i].search_on_param(q):
-            pprint(i)
+    if q=='exit':
+        break
+    elif len(q)>0:
+        for i in cars.keys():
+            #if cars[i].search_on_param(q) or cars[i].fuzzy_search_on_param(q):
+            if cars[i].fuzzy_search_on_param(q):
+                pprint(i)
+    
     input('...')
 
 

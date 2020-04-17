@@ -1,0 +1,6 @@
+VolksWagen Tuareg 2014 дизель 265 2500 1
+Toyota LC200 2019 дизель 248 3200 1
+Range_Rover Sport 2015 бензин 550 8500 3
+BMW X6M 2016 бензин 720 10000 5
+Lexus RX450 2018 бензин 300 2800 4
+VolksWagen Amarok 2018 дизель 170 1800 7

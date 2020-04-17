@@ -20,6 +20,12 @@ cars = {
     amarok.key: amarok
 }
 
+cars1={}
+for line in open('test_data.txt'):
+    b, m, y, e_t, e_p, c, v = [i for i in line.split()]
+    c=MyCar(b, m, y, MyEngine(e_t, e_p), c, v)
+    cars1[c.key]=c
+
 queries = [
     'марка VolksWagen',
     'гв 2018',
@@ -46,7 +52,7 @@ queries = [
     
 #    input('...')
 
-for query, cars in product(queries, cars.values()):
-    if cars == query:
-        pprint((query, cars))
+for query, cars1 in product(queries, cars.values()):
+    if cars1 == query:
+        pprint((query, cars1))
     pprint((query, 'not found'))

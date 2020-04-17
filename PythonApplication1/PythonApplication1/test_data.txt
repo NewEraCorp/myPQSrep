@@ -1,6 +1,6 @@
-VolksWagen Tuareg 2014 äèçåëü 265 2500 1
-Toyota LC200 2019 äèçåëü 248 3200 1
-Range_Rover Sport 2015 áåíçèí 550 8500 3
-BMW X6M 2016 áåíçèí 720 10000 5
-Lexus RX450 2018 áåíçèí 300 2800 4
-VolksWagen Amarok 2018 äèçåëü 170 1800 7
+VolksWagen Tuareg 2014 Ð´Ð¸Ð·ÐµÐ»ÑŒ 265 2500 1
+Toyota LC200 2019 Ð´Ð¸Ð·ÐµÐ»ÑŒ 248 3200 1
+Range_Rover Sport 2015 Ð±ÐµÐ½Ð·Ð¸Ð½ 550 8500 3
+BMW X6M 2016 Ð±ÐµÐ½Ð·Ð¸Ð½ 720 10000 5
+Lexus RX450 2018 Ð±ÐµÐ½Ð·Ð¸Ð½ 300 2800 4
+VolksWagen Amarok 2018 Ð´Ð¸Ð·ÐµÐ»ÑŒ 170 1800 7

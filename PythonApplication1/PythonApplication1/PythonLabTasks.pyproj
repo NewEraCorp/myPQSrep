@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b64bf401-8469-4815-8ea9-8d1f8f6255df</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>PythonApplication1</Name>
+    <Name>PythonLabTasks</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
@@ -27,9 +28,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="main.py" />
-    <Compile Include="task5\my_str_cmp.py" />
     <Compile Include="task5\search_in_dict.py" />
     <Compile Include="task5\search_in_list.py" />
+    <Compile Include="task5\str_functions.py" />
     <Compile Include="task5\task5.3.py" />
     <Compile Include="task5\task5.py" />
   </ItemGroup>

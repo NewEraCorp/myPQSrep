@@ -5,3 +5,9 @@ def compare(S1, S2):
         count += S2.count(ngram)
     return count/max(len(S1), len(S2))
 
+def int_val(s):
+    try:
+        return int(s)
+    except ValueError:
+        return 0
+

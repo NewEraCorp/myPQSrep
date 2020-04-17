@@ -1,14 +1,15 @@
 from pprint import pprint
 from MyCar import MyCar
+from MyEngine import MyEngine
 from itertools import product
 
 
-tuareg = MyCar("VolksWagen", "Tuareg", 2014, 265, 2500, 1)
-lc200 = MyCar("Toyota", "LC200", 2019, 248, 3200, 1)
-rr_sport = MyCar("Range_Rover", "Sport", 2015, 550, 8500, 3)
-bmw_x6m = MyCar("BMW", "X6M", 2016, 720, 10000, 5)
-lex_rx450 = MyCar("Lexus", "RX450", 2018, 300, 2800, 4)
-amarok = MyCar("VolksWagen", "Amarok", 2018, 170, 1800, 7)
+tuareg = MyCar("VolksWagen", "Tuareg", 2014, MyEngine('дизель', 265), 2500, 1)
+lc200 = MyCar("Toyota", "LC200", 2019, MyEngine('дизель', 248), 3200, 1)
+rr_sport = MyCar("Range_Rover", "Sport", 2015, MyEngine('бензин', 550), 8500, 3)
+bmw_x6m = MyCar("BMW", "X6M", 2016, MyEngine('бензин', 720), 10000, 5)
+lex_rx450 = MyCar("Lexus", "RX450", 2018, MyEngine('бензин', 300), 2800, 4)
+amarok = MyCar("VolksWagen", "Amarok", 2018, MyEngine('дизель', 170), 1800, 7)
 
 cars = {
     tuareg.key: tuareg,
@@ -27,9 +28,11 @@ queries = [
     'мощность 255',
     'цена 3000',
     'модель X6M',
-    'бренд Tiyta',
+    'бренд Toyta',
+    'дизель 180',
+    'двигатель бензн'
     ]
-#pprint(lc200.hp)
+#pprint(tuareg.engine.en_pow)
 
 #while 1:
 #    q = input('Введите запрос для поиска: ')
@@ -46,3 +49,4 @@ queries = [
 for query, cars in product(queries, cars.values()):
     if cars == query:
         pprint((query, cars))
+    pprint((query, 'not found'))

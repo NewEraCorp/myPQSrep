@@ -57,4 +57,4 @@ for query, cars1 in product(queries, cars1.values()):
     if cars1 == query:
         pprint((query, cars1))
     else:
-        pprint((query, 'not found'))
+        pprint((query, cars1.key, 'false'))

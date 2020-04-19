@@ -5,7 +5,7 @@ from MyEngine import MyEngine
 BRAND_WORDS = {'марка', 'бренд', 'фирма'}
 MODEL_WORDS = {'модель', 'название'}
 YEAR_WORDS = {'год выпуска', 'гв', 'старше', 'младше'}
-ENGINE_WORDS = {'двигатель', 'лс', 'мощность', 'hp', 'мощнее', 'выше', 'ниже', 'бензин', 'дизель'}
+ENGINE_WORDS = {'двигатель', 'лс', 'мощность', 'hp', 'мощнее', 'выше', 'ниже'}
 COST_WORDS = {'цена', 'стоимость', 'дороже', 'дешевле'}
 
 class MyCar:
@@ -155,10 +155,10 @@ class MyCar:
         def by_year(Q):
             query_year = max([ int_val(q) for q in Q ])
             if 'младше' in Q:
-                return query_year < self.year
+                return query_year < int(self.year)
             if 'старше' in Q:
-                return query_year > self.year
-            return query_year + 1 >= self.year >= query_year - 1
+                return query_year > int(self.year)
+            return query_year + 1 >= int(self.year) >= query_year - 1
        
         def by_en_type(Q):
             Q = Q - ENGINE_WORDS
@@ -174,15 +174,15 @@ class MyCar:
                 return query_engine < self.engine.en_pow
             if 'ниже' in Q:
                 return query_engine > self.engine.en_pow
-            return query_engine + 10 >= self.engine.en_pow >= query_engine - 10          
+            return query_engine + 10 >= int(self.engine.en_pow) >= query_engine - 10          
 
         def by_cost(Q):
             query_cost = max([ int_val(q) for q in Q ])
             if 'дороже' in Q:
-                return query_cost < self.cost
+                return query_cost < int(self.cost)
             if 'дешевле' in Q:
-                return query_cost > self.cost
-            return query_cost + 1000 >= self.cost >= query_cost - 1000
+                return query_cost > int(self.cost)
+            return query_cost + 1000 >= int(self.cost) >= query_cost - 1000
 
         q_words = set(query.split())
         score = 0

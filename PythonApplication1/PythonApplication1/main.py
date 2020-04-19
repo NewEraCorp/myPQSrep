@@ -4,21 +4,21 @@ from MyEngine import MyEngine
 from itertools import product
 
 
-tuareg = MyCar("VolksWagen", "Tuareg", 2014, MyEngine('дизель', 265), 2500, 1)
-lc200 = MyCar("Toyota", "LC200", 2019, MyEngine('дизель', 248), 3200, 1)
-rr_sport = MyCar("Range_Rover", "Sport", 2015, MyEngine('бензин', 550), 8500, 3)
-bmw_x6m = MyCar("BMW", "X6M", 2016, MyEngine('бензин', 720), 10000, 5)
-lex_rx450 = MyCar("Lexus", "RX450", 2018, MyEngine('бензин', 300), 2800, 4)
-amarok = MyCar("VolksWagen", "Amarok", 2018, MyEngine('дизель', 170), 1800, 7)
+#tuareg = MyCar("VolksWagen", "Tuareg", 2014, MyEngine('дизель', 265), 2500, 1)
+#lc200 = MyCar("Toyota", "LC200", 2019, MyEngine('дизель', 248), 3200, 1)
+#rr_sport = MyCar("Range_Rover", "Sport", 2015, MyEngine('бензин', 550), 8500, 3)
+#bmw_x6m = MyCar("BMW", "X6M", 2016, MyEngine('бензин', 720), 10000, 5)
+#lex_rx450 = MyCar("Lexus", "RX450", 2018, MyEngine('бензин', 300), 2800, 4)
+#amarok = MyCar("VolksWagen", "Amarok", 2018, MyEngine('дизель', 170), 1800, 7)
 
-cars = {
-    tuareg.key: tuareg,
-    lc200.key: lc200,
-    rr_sport.key: rr_sport,
-    bmw_x6m.key: bmw_x6m,
-    lex_rx450.key: lex_rx450,
-    amarok.key: amarok
-}
+#cars = {
+#    tuareg.key: tuareg,
+#    lc200.key: lc200,
+#    rr_sport.key: rr_sport,
+#    bmw_x6m.key: bmw_x6m,
+#    lex_rx450.key: lex_rx450,
+#    amarok.key: amarok
+#}
 
 cars1={}
 for line in open('test_data.txt'):
@@ -36,9 +36,10 @@ queries = [
     'модель X6M',
     'бренд Toyta',
     'дизель 180',
-    'двигатель бензн'
+    'двигатель бензин',
+    'двигатель биодизель',
     ]
-#pprint(tuareg.engine.en_pow)
+print(cars1)
 
 #while 1:
 #    q = input('Введите запрос для поиска: ')
@@ -52,7 +53,8 @@ queries = [
     
 #    input('...')
 
-for query, cars1 in product(queries, cars.values()):
+for query, cars1 in product(queries, cars1.values()):
     if cars1 == query:
         pprint((query, cars1))
-    pprint((query, 'not found'))
+    else:
+        pprint((query, 'not found'))

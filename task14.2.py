@@ -12,7 +12,7 @@ class MyList(list):
             raise Exception('>10')
         
 
-a=MyList(1,2,3,4,5,6,7,8,9)
+a=MyList(input('Введите данные: ')).split(' ')
 
 a.append(12)
 

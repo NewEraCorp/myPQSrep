@@ -1,4 +1,5 @@
 class MyList(list):
+#задание 14.2
     def __init__(self, *args, **kwargs):
         if (len(args)+len(kwargs))<=10:
             return super().__init__(args, *kwargs)
@@ -12,7 +13,7 @@ class MyList(list):
             raise Exception('>10')
         
 
-a=MyList(input('Введите данные: ')).split(' ')
+a=MyList(1,2,3,4,5,6,7,8,9)
 
 a.append(12)
 
